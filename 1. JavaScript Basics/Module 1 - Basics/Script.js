@@ -1,7 +1,6 @@
 function sayHello(){
-    alert("Hello, World!");
+    console.log("Hello!");
 }
 
 sayHello();
-
-console.log(sayHello())
+console.log("This is a basic JavaScript script.");
