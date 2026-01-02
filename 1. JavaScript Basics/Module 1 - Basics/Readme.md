@@ -40,3 +40,32 @@ Step Two: Include a Script Tag with the src attribute
 </html>
 
 ```
+
+## LOOPS AND ITERATIONS
+They are for automating repetitive tasks and processing large data sets. Specifically they're used to iterate through arrays, perform actions and control flow of code dynamically. They're important in building dynamic and interactive apps: 
+
+#### For Loop
+It allows execution of code for a specified number of time or until a particular condition is met.. Has three parts: intialitzation, condition and update: 
+```
+for (intialization; condition; update) {
+    //code to be executed
+}
+```
+
+Example
+```
+let limit = 50; //fibonacci sequence
+let a = 0;
+let b = 1;
+while (a <= limit) {
+    console.log (a);
+    let temp = a+b;
+    a = b
+    b = temp
+}
+```
+
+
+#### While Loop
+
+#### Do... While Loop
