@@ -49,3 +49,21 @@ switch (day) {
 //ternary operator - concise way to write conditional statement
 let age_two = 20
 let isAdult = age_two >= 18 ? "Yes" : "No";
+
+// Example
+
+let userType = "supervisor"
+let userCategory ;
+
+switch (userType) {
+    case "admin":
+        userCategory = "Administrator"
+        break;
+    case "manager":
+        userCategory = "Manager"
+        break;
+    default:
+        userCategory = "unknown"
+}
+
+console.log(userType, "User Category: ", userCategory)

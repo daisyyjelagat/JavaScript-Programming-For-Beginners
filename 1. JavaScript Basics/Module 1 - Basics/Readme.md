@@ -69,3 +69,24 @@ while (a <= limit) {
 #### While Loop
 
 #### Do... While Loop
+Structure: 
+```
+do {
+    // code block
+}while ();
+```
+
+Example
+```
+let roll = 1;
+
+do {
+    console.log("rolled a: " + roll);
+    roll ++;
+} while (roll < 7)
+```
+
+### Note
+For Loops are used when the number of iterations are known and exact while both while and do... while are condition dependent. For loops require explicit intialization within the loop header while the later require initializatioon before the loop. 
+
+The choice of loop depends on the specific use case and control flow consideration; for loops are for precise control, while loops are for condition dependent repitition and do...while are to ensure at least one execution happens then it becomes condition dependent. 

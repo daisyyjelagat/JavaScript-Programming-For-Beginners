@@ -32,3 +32,18 @@ while (a <= limit) {
     b = temp
 }
 
+//do... while - execute a block of code as long as a specified condition is true unlike for, or while.. this guarantees that the code block executes atleast once
+/* 
+do {
+    // code block
+}while ();
+
+*/
+
+let roll = 1;
+
+do {
+    console.log("rolled a: " + roll);
+    roll ++;
+} while (roll < 7)
+
