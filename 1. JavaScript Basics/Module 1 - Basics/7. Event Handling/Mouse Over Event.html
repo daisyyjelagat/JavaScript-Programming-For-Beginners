@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling</title>
+   
+</head>
+
+<body>
+    <h1>Event Handling in JavaScript: On Mouse Over</h1>
+    <hr>
+
+    <div id="mydiv">Hover Over Me</div>
+    <p id="output_two"></p>
+
+    <script> 
+        const div = document.getElementById('mydiv');
+        const output_two = document.getElementById('output_two');
+        //retrives references to the elements using document.getElement 
+        //stores them to the variables
+
+        div.onmouseover = function() {
+            output_two.textContent = "Mouse Over Div!"
+        };   
+        // .onmouseover -  
+        // the event handler (an anonymous function) specifies what happens when the button is clicked
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling: Change Event</title>
+   
+</head>
+
+<body>
+    <h1>Event Handling in JavaScript: On Click</h1>
+    <hr>
+
+    <button id="myButton">Click Me</button>  
+    <p id="output"></p>
+
+    <script> 
+        const button = document.getElementById('myButton');
+        const output = document.getElementById('output');
+        //retrives references to the elements using document.getElement 
+        //stores them to the variables
+
+        button.onclick = function () {
+            output.textContent = "Button Clicked"
+        };   
+        // .onclick - the event handler is attached to the button element 
+        // the event handler (an anonymous function) specifies what happens when the button is clicked
+        
+    </script>
+
+
+</body>
+</html>

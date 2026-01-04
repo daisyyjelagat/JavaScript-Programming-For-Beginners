@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling: Key Down Event </title>
+   
+</head>
+
+<body>
+    <h1>Event Handling in JavaScript: Key Down</h1>
+    <p> This is triggered when a key is pressed on the keyboard. Below, we will create an input field, where we enter keys and the key that has been entered is displayed</p>
+    <hr>
+
+    <input type="text" id="myInput">
+    <p id="output_three"></p>
+
+    <script> 
+        const input = document.getElementById('myInput');
+        const output_three = document.getElementById('output_three');
+        //retrives references to the elements using document.getElement 
+        //stores them to the variables
+
+        input.onkeydown = function(event) {
+            output_three.textContent = `Key Pressed: ${event.key}`
+        };   
+        // .onmouseover -  triggered when you press a key on the keyboard
+        // the event handler (an anonymous function) specifies what happens when the button is clicked
+        
+    </script>
+
+
+</body>
+</html>

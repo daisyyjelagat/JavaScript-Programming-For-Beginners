@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling: Change Event</title>
+   
+</head>
+
+<body>
+    <h1>Event Handling in JavaScript: Change Event</h1>
+    <p>It is triggered when the value of an input element is triggered typically, it can be used to form elements like text field or drop downs</p>
+    <hr>
+
+    <input type="text" id="myInputTwo">
+    <p id="output_four"></p>
+
+    <script> 
+        const input_two = document.getElementById('myInputTwo');
+        const output_four = document.getElementById('output_four');
+        //retrives references to the elements using document.getElement 
+        //stores them to the variables
+
+        input_two.onchange = function(event) {
+            output_four.textContent = `Value Changed to: ${input_two.value}`
+        };   
+        // .onmouseover -  triggered when you press a key on the keyboard
+        // the event handler (an anonymous function) specifies what happens when the button is clicked
+        
+    </script>
+
+
+</body>
+</html>
