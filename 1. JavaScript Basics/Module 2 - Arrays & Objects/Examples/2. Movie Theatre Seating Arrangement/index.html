@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+
+    <body>
+        <div id="seating-chart" class="seating-chart"> 
+            <div class="seat available" onclick="bookSeat(0,0)">A1</div> <!--inidvidual seats are represented as div elements -->
+            <div class="seat available" onclick="bookSeat(0,1)">A2</div> <!--each seat is given static labels like A1, A2-->
+            <div class="seat available" onclick="bookSeat(0,2)">A3</div>
+            <div class="seat available" onclick="bookSeat(1,0)">B1</div>
+            <div class="seat available" onclick="bookSeat(1,1)">B2</div> <!--when a seat is selected, the bookseat(row, col) is triggered parsing the corresponding row and column indices of the booked seat -->
+            <div class="seat available" onclick="bookSeat(1,2)">B3</div>
+            <div class="seat available" onclick="bookSeat(2,0)">C1</div>
+            <div class="seat available" onclick="bookSeat(2,1)">C2</div>
+            <div class="seat available" onclick="bookSeat(2,2)">C3</div>
+        </div>
+
+        <script>
+            //JavaScript code for booking seats
+            const theaterSeats = [
+                ['x', 'o', 'x']
+                ['o', 'x', 'o']
+                ['x', 'o', 'x'] // x is booked, o is available
+            ];
+
+            function bookSeat (row,col) { // checks if the seat is available and books it, and 
+                if (theaterSeats[row][col] === 'o') {
+                    theaterSeats[row][col] = 'x';
+                    updateSeatStatus(row,col,'booked');
+                    alert (`Seat ${String.fromCharCode(65 + row)} ${col + 1} is booked`);
+                };
+                else {
+                    alert (`Seat ${String.fromCharCode(65 + row)} ${col + 1} is taken`);
+                }
+            }
+
+            function bookRandomSeat () {
+                const availableSeats = [];
+
+                for (let row = 0; row < theaterSeats.length; row++) {
+                    for (let col = 0; col <theaterSeats.lenght; col++) {
+                        if (theaterSeats[row][col] === '0') {
+                            availableSeats.push({row, col});
+                        }
+                    }
+                }
+
+                if (availableSeats.length>0){ // finds all available seats randomly selects one, books it and displays an alert
+                    const randomIndex = Math.floor(Math.random() * availableSeats.length);
+                    const {row,col} = availableSeats[randomIndex];
+                    bookSeat(row,col);
+                } else {
+                    alert ('All Seats are already booked.')
+                }
+            }
+
+        </script>
+
+
+
+    </body>
+
+</html>

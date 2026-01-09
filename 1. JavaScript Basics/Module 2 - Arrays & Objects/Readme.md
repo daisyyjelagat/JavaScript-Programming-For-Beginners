@@ -10,3 +10,7 @@ An array is a data structure used to store a collection of values
 
 
 #### Manipulating and Iterating Arrays
+
+### Working with 2D Arrays 
+
+Example: Movie Theatre Seating Arrangement

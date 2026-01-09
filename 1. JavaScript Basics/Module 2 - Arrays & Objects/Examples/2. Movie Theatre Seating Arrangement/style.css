@@ -1,0 +1,40 @@
+/* styles the seats containers */
+
+.seating-chart { /* creates a grid layout with 3 columns of 70 px each, a gap of 10px and the content is centered*/
+    display: grid; 
+    grid-template-columns: repeat(3, 70px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat { /* defines the heigh and column of each seat, centres the text, adds a border and changes the cursor to a point to indicate it's clickable*/
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.booked { /*it changes the background color to red and set cursor to red and text color to white*/
+    background-color: #FF0000;
+    cursor: not-allowed;
+    color: white; 
+}
+
+.available { 
+    background-color: #7FFF00;
+}
+
+
+.select-button { /* it sets the width to 100%*/
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
