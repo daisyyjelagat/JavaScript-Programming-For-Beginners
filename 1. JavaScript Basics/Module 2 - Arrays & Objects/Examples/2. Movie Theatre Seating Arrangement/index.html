@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Theatre Seating Arrangement</title>
+        <link rel="stylesheet" href="./style.css">
         
     </head>
 
@@ -18,12 +21,15 @@
             <div class="seat available" onclick="bookSeat(2,2)">C3</div>
         </div>
 
+        <div>
+            <button onclick="bookRandomSeat()">Book Random Seat</button> <!--button to book a random available seat -->
+
         <script>
             //JavaScript code for booking seats
             const theaterSeats = [
-                ['x', 'o', 'x']
-                ['o', 'x', 'o']
-                ['x', 'o', 'x'] // x is booked, o is available
+                ['x', 'o', 'x'],
+                ['o', 'x', 'o'],
+                ['x', 'o', 'x'], // x is booked, o is available
             ];
 
             function bookSeat (row,col) { // checks if the seat is available and books it, and 
@@ -31,7 +37,7 @@
                     theaterSeats[row][col] = 'x';
                     updateSeatStatus(row,col,'booked');
                     alert (`Seat ${String.fromCharCode(65 + row)} ${col + 1} is booked`);
-                };
+                }
                 else {
                     alert (`Seat ${String.fromCharCode(65 + row)} ${col + 1} is taken`);
                 }
