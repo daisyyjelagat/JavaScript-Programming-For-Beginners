@@ -21,3 +21,19 @@ const person_one = new Person ("John", "Doe")
 console.log(person_one.getFullName())
 
 // using object literals to create objects:
+const students = {
+    first_name: "Alice",
+    second_name: "Johnson",
+    getStudentName: function (){
+        return `${this.first_name} ${this.second_name}`
+    }
+}
+console.log(students.getStudentName());
+
+// using function constructors to create objects
+function Car (make, model){
+    this.make = make;
+    this.model = model;
+}
+const car1= new Car ("Toyota", "Camry")
+console.log(car1)
